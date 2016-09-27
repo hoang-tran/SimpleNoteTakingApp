@@ -9,9 +9,13 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
   @IBOutlet weak var usernameTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
+
+  lazy var homeViewController : HomeViewController = {
+    let viewController = UIStoryboard.initializeViewController(HomeViewController)
+    return viewController
+  }()
 
   @IBAction func onTapLoginButton(sender: AnyObject) {
     guard let username = usernameTextField.text where username.characters.count > 0 else {
@@ -22,21 +26,10 @@ class LoginViewController: UIViewController {
       showErrorAlertWithMessage("Password cannot be empty")
       return
     }
-    guard usernameAndPasswordAreCorrect(username, password: password) else {
+    guard username == correctUsername && password == correctPassword else {
       showErrorAlertWithMessage("Username or password is incorrect")
       return
     }
-    print("proceed to home view controller")
-  }
-
-}
-
-extension LoginViewController {
-  func usernameAndPasswordAreCorrect(username: String, password: String) -> Bool {
-    let correctUsername = "appcoda"
-    let correctPassword = "password"
-    return username == correctUsername && password == correctPassword
+    navigationController?.presentViewController(homeViewController, animated: true, completion: nil)
   }
 }
-
-

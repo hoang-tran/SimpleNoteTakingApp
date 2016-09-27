@@ -15,6 +15,11 @@
 		F3594B431D99FCC70046DA07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3594B411D99FCC70046DA07 /* LaunchScreen.storyboard */; };
 		F3594B4E1D99FCC70046DA07 /* SimpleNoteTakingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B4D1D99FCC70046DA07 /* SimpleNoteTakingAppTests.swift */; };
 		F3594B591D9AB4E20046DA07 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B581D9AB4E20046DA07 /* UIViewController+Extensions.swift */; };
+		F3594B5B1D9AB6D50046DA07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B5A1D9AB6D50046DA07 /* HomeViewController.swift */; };
+		F3594B5D1D9AB9930046DA07 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B5C1D9AB9930046DA07 /* Note.swift */; };
+		F3594B5F1D9ABC2B0046DA07 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B5E1D9ABC2B0046DA07 /* UIStoryboard+Extensions.swift */; };
+		F3594B611D9AC0BE0046DA07 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B601D9AC0BE0046DA07 /* UITableView+Extensions.swift */; };
+		F3594B631D9AC1670046DA07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B621D9AC1670046DA07 /* Constants.swift */; };
 		FCA657600359B5225C385369 /* Pods_SimpleNoteTakingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB24B0AA70376E245062B2F /* Pods_SimpleNoteTakingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +50,11 @@
 		F3594B4D1D99FCC70046DA07 /* SimpleNoteTakingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNoteTakingAppTests.swift; sourceTree = "<group>"; };
 		F3594B4F1D99FCC70046DA07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3594B581D9AB4E20046DA07 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F3594B5A1D9AB6D50046DA07 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F3594B5C1D9AB9930046DA07 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		F3594B5E1D9ABC2B0046DA07 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		F3594B601D9AC0BE0046DA07 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		F3594B621D9AC1670046DA07 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F3FA36D18C045A8D80452886 /* Pods-SimpleNoteTakingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNoteTakingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNoteTakingApp/Pods-SimpleNoteTakingApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +117,11 @@
 				F3594B411D99FCC70046DA07 /* LaunchScreen.storyboard */,
 				F3594B441D99FCC70046DA07 /* Info.plist */,
 				F3594B581D9AB4E20046DA07 /* UIViewController+Extensions.swift */,
+				F3594B5A1D9AB6D50046DA07 /* HomeViewController.swift */,
+				F3594B5C1D9AB9930046DA07 /* Note.swift */,
+				F3594B5E1D9ABC2B0046DA07 /* UIStoryboard+Extensions.swift */,
+				F3594B601D9AC0BE0046DA07 /* UITableView+Extensions.swift */,
+				F3594B621D9AC1670046DA07 /* Constants.swift */,
 			);
 			path = SimpleNoteTakingApp;
 			sourceTree = "<group>";
@@ -331,9 +346,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3594B5F1D9ABC2B0046DA07 /* UIStoryboard+Extensions.swift in Sources */,
+				F3594B611D9AC0BE0046DA07 /* UITableView+Extensions.swift in Sources */,
+				F3594B5D1D9AB9930046DA07 /* Note.swift in Sources */,
 				F3594B3B1D99FCC70046DA07 /* LoginViewController.swift in Sources */,
 				F3594B591D9AB4E20046DA07 /* UIViewController+Extensions.swift in Sources */,
 				F3594B391D99FCC70046DA07 /* AppDelegate.swift in Sources */,
+				F3594B5B1D9AB6D50046DA07 /* HomeViewController.swift in Sources */,
+				F3594B631D9AC1670046DA07 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
