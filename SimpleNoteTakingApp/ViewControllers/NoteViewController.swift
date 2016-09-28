@@ -26,6 +26,7 @@ class NoteViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupNavigationButtons()
+    setupBodyTextView()
   }
 
   func onTapCreateButton(sender: AnyObject) {
@@ -39,14 +40,20 @@ class NoteViewController: UIViewController {
   }
 
   @IBAction func onNoteTitleTextFieldChanged(sender: AnyObject) {
-    self.navigationItem.rightBarButtonItem?.enabled = titleTextField.text?.characters.count > 0
+    navigationItem.rightBarButtonItem?.enabled = titleTextField.text?.characters.count > 0
   }
 }
 
 extension NoteViewController {
   private func setupNavigationButtons() {
-    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .Plain, target: self, action: #selector(NoteViewController.onTapCreateButton))
-    self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(NoteViewController.onTapCancelButton))
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .Plain, target: self, action: #selector(NoteViewController.onTapCreateButton))
+    navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(NoteViewController.onTapCancelButton))
+  }
+
+  private func setupBodyTextView() {
+    bodyTextView.layer.borderWidth = 0.5
+    bodyTextView.layer.borderColor = UIColor.colorWithRed(204, green: 204, blue: 204).CGColor
+    bodyTextView.layer.cornerRadius = 4;
   }
 
   private func saveNoteToDatabase() {

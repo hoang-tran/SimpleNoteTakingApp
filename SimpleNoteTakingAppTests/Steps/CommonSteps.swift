@@ -35,7 +35,7 @@ extension BaseUITests {
   }
 
   func useTestDatabase() {
-    Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
+    Realm.Configuration.defaultConfiguration.inMemoryIdentifier = name
   }
 
   func clearDatabase() {
