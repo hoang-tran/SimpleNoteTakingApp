@@ -17,6 +17,16 @@ class LoginViewController: UIViewController {
     return viewController
   }()
 
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: false)
+  }
+
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    navigationController?.setNavigationBarHidden(false, animated: false)
+  }
+
   @IBAction func onTapLoginButton(sender: AnyObject) {
     guard let username = usernameTextField.text where username.characters.count > 0 else {
       showErrorAlertWithMessage("Username cannot be empty")
@@ -30,6 +40,6 @@ class LoginViewController: UIViewController {
       showErrorAlertWithMessage("Username or password is incorrect")
       return
     }
-    navigationController?.presentViewController(homeViewController, animated: true, completion: nil)
+    navigationController?.pushViewController(homeViewController, animated: true)
   }
 }

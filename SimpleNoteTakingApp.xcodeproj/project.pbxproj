@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		5C69C7670C05E68283E6F527 /* Pods_SimpleNoteTakingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D437614AF6B069613D49D48A /* Pods_SimpleNoteTakingAppTests.framework */; };
 		F3594B391D99FCC70046DA07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B381D99FCC70046DA07 /* AppDelegate.swift */; };
-		F3594B3B1D99FCC70046DA07 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B3A1D99FCC70046DA07 /* LoginViewController.swift */; };
 		F3594B3E1D99FCC70046DA07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3594B3C1D99FCC70046DA07 /* Main.storyboard */; };
 		F3594B401D99FCC70046DA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3594B3F1D99FCC70046DA07 /* Assets.xcassets */; };
 		F3594B431D99FCC70046DA07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3594B411D99FCC70046DA07 /* LaunchScreen.storyboard */; };
 		F3594B4E1D99FCC70046DA07 /* SimpleNoteTakingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B4D1D99FCC70046DA07 /* SimpleNoteTakingAppTests.swift */; };
-		F3594B591D9AB4E20046DA07 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B581D9AB4E20046DA07 /* UIViewController+Extensions.swift */; };
-		F3594B5B1D9AB6D50046DA07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B5A1D9AB6D50046DA07 /* HomeViewController.swift */; };
-		F3594B5D1D9AB9930046DA07 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B5C1D9AB9930046DA07 /* Note.swift */; };
-		F3594B5F1D9ABC2B0046DA07 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B5E1D9ABC2B0046DA07 /* UIStoryboard+Extensions.swift */; };
-		F3594B611D9AC0BE0046DA07 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B601D9AC0BE0046DA07 /* UITableView+Extensions.swift */; };
-		F3594B631D9AC1670046DA07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B621D9AC1670046DA07 /* Constants.swift */; };
+		F3594B721D9B552D0046DA07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B671D9B552D0046DA07 /* Constants.swift */; };
+		F3594B731D9B552D0046DA07 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B691D9B552D0046DA07 /* UIStoryboard+Extensions.swift */; };
+		F3594B741D9B552D0046DA07 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B6A1D9B552D0046DA07 /* UITableView+Extensions.swift */; };
+		F3594B751D9B552D0046DA07 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B6B1D9B552D0046DA07 /* UIViewController+Extensions.swift */; };
+		F3594B761D9B552D0046DA07 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B6D1D9B552D0046DA07 /* Note.swift */; };
+		F3594B771D9B552D0046DA07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B6F1D9B552D0046DA07 /* HomeViewController.swift */; };
+		F3594B781D9B552D0046DA07 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B701D9B552D0046DA07 /* LoginViewController.swift */; };
+		F3594B791D9B552D0046DA07 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B711D9B552D0046DA07 /* NoteViewController.swift */; };
 		FCA657600359B5225C385369 /* Pods_SimpleNoteTakingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB24B0AA70376E245062B2F /* Pods_SimpleNoteTakingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +42,6 @@
 		D437614AF6B069613D49D48A /* Pods_SimpleNoteTakingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleNoteTakingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3594B351D99FCC70046DA07 /* SimpleNoteTakingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNoteTakingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3594B381D99FCC70046DA07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3594B3A1D99FCC70046DA07 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F3594B3D1D99FCC70046DA07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3594B3F1D99FCC70046DA07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3594B421D99FCC70046DA07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,12 +49,14 @@
 		F3594B491D99FCC70046DA07 /* SimpleNoteTakingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleNoteTakingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3594B4D1D99FCC70046DA07 /* SimpleNoteTakingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNoteTakingAppTests.swift; sourceTree = "<group>"; };
 		F3594B4F1D99FCC70046DA07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3594B581D9AB4E20046DA07 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		F3594B5A1D9AB6D50046DA07 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F3594B5C1D9AB9930046DA07 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		F3594B5E1D9ABC2B0046DA07 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
-		F3594B601D9AC0BE0046DA07 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
-		F3594B621D9AC1670046DA07 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F3594B671D9B552D0046DA07 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F3594B691D9B552D0046DA07 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		F3594B6A1D9B552D0046DA07 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		F3594B6B1D9B552D0046DA07 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F3594B6D1D9B552D0046DA07 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		F3594B6F1D9B552D0046DA07 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F3594B701D9B552D0046DA07 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F3594B711D9B552D0046DA07 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		F3FA36D18C045A8D80452886 /* Pods-SimpleNoteTakingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNoteTakingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNoteTakingApp/Pods-SimpleNoteTakingApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,18 +112,13 @@
 		F3594B371D99FCC70046DA07 /* SimpleNoteTakingApp */ = {
 			isa = PBXGroup;
 			children = (
-				F3594B381D99FCC70046DA07 /* AppDelegate.swift */,
-				F3594B3A1D99FCC70046DA07 /* LoginViewController.swift */,
+				F3594B7A1D9B55400046DA07 /* Support */,
+				F3594B661D9B552D0046DA07 /* Config */,
+				F3594B681D9B552D0046DA07 /* Extensions */,
+				F3594B6C1D9B552D0046DA07 /* Models */,
+				F3594B6E1D9B552D0046DA07 /* ViewControllers */,
 				F3594B3C1D99FCC70046DA07 /* Main.storyboard */,
-				F3594B3F1D99FCC70046DA07 /* Assets.xcassets */,
-				F3594B411D99FCC70046DA07 /* LaunchScreen.storyboard */,
-				F3594B441D99FCC70046DA07 /* Info.plist */,
-				F3594B581D9AB4E20046DA07 /* UIViewController+Extensions.swift */,
-				F3594B5A1D9AB6D50046DA07 /* HomeViewController.swift */,
-				F3594B5C1D9AB9930046DA07 /* Note.swift */,
-				F3594B5E1D9ABC2B0046DA07 /* UIStoryboard+Extensions.swift */,
-				F3594B601D9AC0BE0046DA07 /* UITableView+Extensions.swift */,
-				F3594B621D9AC1670046DA07 /* Constants.swift */,
+				F3594B381D99FCC70046DA07 /* AppDelegate.swift */,
 			);
 			path = SimpleNoteTakingApp;
 			sourceTree = "<group>";
@@ -133,6 +130,52 @@
 				F3594B4F1D99FCC70046DA07 /* Info.plist */,
 			);
 			path = SimpleNoteTakingAppTests;
+			sourceTree = "<group>";
+		};
+		F3594B661D9B552D0046DA07 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B671D9B552D0046DA07 /* Constants.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F3594B681D9B552D0046DA07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B691D9B552D0046DA07 /* UIStoryboard+Extensions.swift */,
+				F3594B6A1D9B552D0046DA07 /* UITableView+Extensions.swift */,
+				F3594B6B1D9B552D0046DA07 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3594B6C1D9B552D0046DA07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B6D1D9B552D0046DA07 /* Note.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3594B6E1D9B552D0046DA07 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B6F1D9B552D0046DA07 /* HomeViewController.swift */,
+				F3594B701D9B552D0046DA07 /* LoginViewController.swift */,
+				F3594B711D9B552D0046DA07 /* NoteViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F3594B7A1D9B55400046DA07 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B3F1D99FCC70046DA07 /* Assets.xcassets */,
+				F3594B411D99FCC70046DA07 /* LaunchScreen.storyboard */,
+				F3594B441D99FCC70046DA07 /* Info.plist */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 		F9FFE3FB0D6EB3482CA258A2 /* Pods */ = {
@@ -346,14 +389,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3594B5F1D9ABC2B0046DA07 /* UIStoryboard+Extensions.swift in Sources */,
-				F3594B611D9AC0BE0046DA07 /* UITableView+Extensions.swift in Sources */,
-				F3594B5D1D9AB9930046DA07 /* Note.swift in Sources */,
-				F3594B3B1D99FCC70046DA07 /* LoginViewController.swift in Sources */,
-				F3594B591D9AB4E20046DA07 /* UIViewController+Extensions.swift in Sources */,
+				F3594B731D9B552D0046DA07 /* UIStoryboard+Extensions.swift in Sources */,
 				F3594B391D99FCC70046DA07 /* AppDelegate.swift in Sources */,
-				F3594B5B1D9AB6D50046DA07 /* HomeViewController.swift in Sources */,
-				F3594B631D9AC1670046DA07 /* Constants.swift in Sources */,
+				F3594B751D9B552D0046DA07 /* UIViewController+Extensions.swift in Sources */,
+				F3594B721D9B552D0046DA07 /* Constants.swift in Sources */,
+				F3594B791D9B552D0046DA07 /* NoteViewController.swift in Sources */,
+				F3594B781D9B552D0046DA07 /* LoginViewController.swift in Sources */,
+				F3594B741D9B552D0046DA07 /* UITableView+Extensions.swift in Sources */,
+				F3594B771D9B552D0046DA07 /* HomeViewController.swift in Sources */,
+				F3594B761D9B552D0046DA07 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

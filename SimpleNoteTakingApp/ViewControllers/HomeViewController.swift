@@ -15,12 +15,25 @@ class HomeViewController: UIViewController {
 
   var notes: Results<Note>?
 
+  lazy var noteViewController : NoteViewController = {
+    let viewController = UIStoryboard.initializeViewController(NoteViewController)
+    let _ = viewController.view
+    return viewController
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     updateNotes()
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.onNewNoteCreated), name: notificationNewNoteCreated, object: nil)
   }
 
   @IBAction func onTapAddNoteButton(sender: AnyObject) {
+    noteViewController.note = nil
+    navigationController?.pushViewController(noteViewController, animated: true)
+  }
+
+  func onNewNoteCreated() {
+    notesTableView.reloadData()
   }
 }
 
@@ -50,7 +63,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     return cell
   }
 
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    noteViewController.note = notes![indexPath.row]
+    navigationController?.pushViewController(noteViewController, animated: true)
+  }
+
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return 50
+    return 60
   }
 }

@@ -10,6 +10,6 @@ import UIKit
 
 extension UITableView {
   func defaultCellWithReuseID(reuseID: String) -> UITableViewCell {
-    return self.dequeueReusableCellWithIdentifier(reuseID) ?? UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: reuseID)
+    return self.dequeueReusableCellWithIdentifier(reuseID) ?? UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseID)
   }
 }

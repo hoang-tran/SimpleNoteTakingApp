@@ -8,3 +8,5 @@
 
 let correctUsername = "appcoda"
 let correctPassword = "password"
+
+let notificationNewNoteCreated = "NewNoteCreated"
