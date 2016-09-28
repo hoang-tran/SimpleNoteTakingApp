@@ -69,6 +69,22 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     navigationController?.pushViewController(noteViewController, animated: true)
   }
 
+  func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    return true
+  }
+
+  func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    if editingStyle == .Delete {
+      let realm = try! Realm()
+      try! realm.write {
+        realm.delete(notes![indexPath.row])
+      }
+      tableView.beginUpdates()
+      tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+      tableView.endUpdates()
+    }
+  }
+
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return 60
   }
