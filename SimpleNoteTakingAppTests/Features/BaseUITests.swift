@@ -11,6 +11,11 @@ import Realm
 import RealmSwift
 
 class BaseUITests: KIFTestCase {
+  override func beforeAll() {
+    super.beforeAll()
+    useTestDatabase()
+  }
+
   override func beforeEach() {
     super.beforeEach()
     backToRoot()

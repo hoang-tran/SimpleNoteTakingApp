@@ -23,8 +23,12 @@ class HomeViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    updateNotes()
     NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.onNewNoteCreated), name: notificationNewNoteCreated, object: nil)
+  }
+
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    updateNotes()
   }
 
   @IBAction func onTapAddNoteButton(sender: AnyObject) {
@@ -43,6 +47,7 @@ extension HomeViewController {
     let realm = try! Realm()
     notes = realm.objects(Note)
     updateTableViewVisibility()
+    notesTableView.reloadData()
   }
 
   func updateTableViewVisibility() {
