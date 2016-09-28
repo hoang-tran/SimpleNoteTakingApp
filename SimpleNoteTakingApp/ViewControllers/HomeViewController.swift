@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
   }
 
   func onNewNoteCreated() {
+    updateTableViewVisibility()
     notesTableView.reloadData()
   }
 }
@@ -41,6 +42,10 @@ extension HomeViewController {
   func updateNotes() {
     let realm = try! Realm()
     notes = realm.objects(Note)
+    updateTableViewVisibility()
+  }
+
+  func updateTableViewVisibility() {
     emptyNotesLabel.hidden = notes?.count > 0
     notesTableView.hidden = !emptyNotesLabel.hidden
   }
@@ -82,6 +87,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
       tableView.beginUpdates()
       tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
       tableView.endUpdates()
+      updateTableViewVisibility()
     }
   }
 
