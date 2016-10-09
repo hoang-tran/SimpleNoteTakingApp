@@ -25,8 +25,8 @@
 		F3594B8C1D9C028E0046DA07 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B881D9C028E0046DA07 /* LoginTests.swift */; };
 		F3594B8E1D9C02E10046DA07 /* LoginSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B8D1D9C02E10046DA07 /* LoginSteps.swift */; };
 		F3594B901D9C031F0046DA07 /* CommonSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B8F1D9C031F0046DA07 /* CommonSteps.swift */; };
-		F3594B921D9C0C5A0046DA07 /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B911D9C0C5A0046DA07 /* NoteTests.swift */; };
-		F3594B941D9C0F1D0046DA07 /* NoteSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B931D9C0F1D0046DA07 /* NoteSteps.swift */; };
+		F3594B921D9C0C5A0046DA07 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B911D9C0C5A0046DA07 /* HomeTests.swift */; };
+		F3594B941D9C0F1D0046DA07 /* HomeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B931D9C0F1D0046DA07 /* HomeSteps.swift */; };
 		F3594B961D9C201D0046DA07 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B951D9C201D0046DA07 /* UIColor+Extensions.swift */; };
 		FCA657600359B5225C385369 /* Pods_SimpleNoteTakingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB24B0AA70376E245062B2F /* Pods_SimpleNoteTakingApp.framework */; };
 /* End PBXBuildFile section */
@@ -69,8 +69,8 @@
 		F3594B881D9C028E0046DA07 /* LoginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		F3594B8D1D9C02E10046DA07 /* LoginSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSteps.swift; sourceTree = "<group>"; };
 		F3594B8F1D9C031F0046DA07 /* CommonSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonSteps.swift; sourceTree = "<group>"; };
-		F3594B911D9C0C5A0046DA07 /* NoteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
-		F3594B931D9C0F1D0046DA07 /* NoteSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSteps.swift; sourceTree = "<group>"; };
+		F3594B911D9C0C5A0046DA07 /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		F3594B931D9C0F1D0046DA07 /* HomeSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSteps.swift; sourceTree = "<group>"; };
 		F3594B951D9C201D0046DA07 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		F3FA36D18C045A8D80452886 /* Pods-SimpleNoteTakingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNoteTakingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNoteTakingApp/Pods-SimpleNoteTakingApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,7 +210,7 @@
 			children = (
 				F3594B871D9C028E0046DA07 /* BaseUITests.swift */,
 				F3594B881D9C028E0046DA07 /* LoginTests.swift */,
-				F3594B911D9C0C5A0046DA07 /* NoteTests.swift */,
+				F3594B911D9C0C5A0046DA07 /* HomeTests.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 			children = (
 				F3594B8D1D9C02E10046DA07 /* LoginSteps.swift */,
 				F3594B8F1D9C031F0046DA07 /* CommonSteps.swift */,
-				F3594B931D9C0F1D0046DA07 /* NoteSteps.swift */,
+				F3594B931D9C0F1D0046DA07 /* HomeSteps.swift */,
 			);
 			path = Steps;
 			sourceTree = "<group>";
@@ -456,8 +456,8 @@
 				F3594B8C1D9C028E0046DA07 /* LoginTests.swift in Sources */,
 				F3594B8B1D9C028E0046DA07 /* BaseUITests.swift in Sources */,
 				F3594B8A1D9C028E0046DA07 /* KIF+Extensions.swift in Sources */,
-				F3594B941D9C0F1D0046DA07 /* NoteSteps.swift in Sources */,
-				F3594B921D9C0C5A0046DA07 /* NoteTests.swift in Sources */,
+				F3594B941D9C0F1D0046DA07 /* HomeSteps.swift in Sources */,
+				F3594B921D9C0C5A0046DA07 /* HomeTests.swift in Sources */,
 				F3594B901D9C031F0046DA07 /* CommonSteps.swift in Sources */,
 				F3594B8E1D9C02E10046DA07 /* LoginSteps.swift in Sources */,
 			);

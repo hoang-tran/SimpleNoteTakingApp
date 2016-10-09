@@ -28,11 +28,20 @@ extension BaseUITests {
     }
   }
 
-  func loginWithCorrectCredentials() {
+  func fillInUsername() {
     fillIn("Login - Username", withText: correctUsername)
-    fillIn("Login - Password", withText: correctPassword)
+  }
+
+  func visitHomeScreen() {
+    fillInUsername()
+    fillInCorrectPassword()
     tapButton("Login")
   }
+  
+  func fillInCorrectPassword() {
+    fillIn("Login - Password", withText: correctPassword)
+  }
+
 
   func useTestDatabase() {
     Realm.Configuration.defaultConfiguration.inMemoryIdentifier = name
@@ -48,4 +57,5 @@ extension BaseUITests {
   func expectToSee(text: String) {
     tester().waitForViewWithAccessibilityLabel(text)
   }
+
 }

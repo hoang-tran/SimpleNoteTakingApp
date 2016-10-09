@@ -7,13 +7,9 @@
 //
 
 extension LoginTests {
-  func clearLoginForm() {
+  func clearOutUsernameAndPasswordFields() {
     tester().clearTextFromViewWithAccessibilityLabel("Login - Username")
     tester().clearTextFromViewWithAccessibilityLabel("Login - Password")
-  }
-
-  func fillInWrongUsername() {
-    fillIn("Login - Username", withText: "wrongUsername")
   }
 
   func fillInWrongPassword() {

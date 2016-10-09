@@ -9,7 +9,7 @@
 class LoginTests: BaseUITests {
   override func beforeEach() {
     super.beforeEach()
-    clearLoginForm()
+    clearOutUsernameAndPasswordFields()
   }
 
   func testEmptyUsername() {
@@ -19,22 +19,25 @@ class LoginTests: BaseUITests {
   }
 
   func testEmptyPassword() {
-    fillInWrongUsername()
+    fillInUsername()
     tapButton("Login")
     expectToSeeAlert("Password cannot be empty")
     tapButton("OK")
   }
 
-  func testWrongCredentials() {
-    fillInWrongUsername()
+  func testWrongUsernameOrPassword() {
+    fillInUsername()
     fillInWrongPassword()
     tapButton("Login")
     expectToSeeAlert("Username or password is incorrect")
     tapButton("OK")
   }
 
-  func testCorrectCredentials() {
-    loginWithCorrectCredentials()
+  func testCorrectUsernameAndPassword() {
+    fillInUsername()
+    fillInCorrectPassword()
+    tapButton("Login")
     expectToGoToHomeScreen()
   }
+  
 }
