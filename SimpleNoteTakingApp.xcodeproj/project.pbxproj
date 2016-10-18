@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18EEB4481DB64101008D21CC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEB4471DB64101008D21CC /* UIColor+Extensions.swift */; };
 		5C69C7670C05E68283E6F527 /* Pods_SimpleNoteTakingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D437614AF6B069613D49D48A /* Pods_SimpleNoteTakingAppTests.framework */; };
 		F3594B391D99FCC70046DA07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B381D99FCC70046DA07 /* AppDelegate.swift */; };
 		F3594B3E1D99FCC70046DA07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3594B3C1D99FCC70046DA07 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		1323CB2C6BD0545FD3CB39A8 /* Pods-SimpleNoteTakingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNoteTakingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNoteTakingAppTests/Pods-SimpleNoteTakingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18EEB4471DB64101008D21CC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		3E2CA09BCFDC21D5160FD669 /* Pods-SimpleNoteTakingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNoteTakingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNoteTakingApp/Pods-SimpleNoteTakingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		667D2D2EB94D2A8C4A080020 /* Pods-SimpleNoteTakingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNoteTakingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNoteTakingAppTests/Pods-SimpleNoteTakingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9BB24B0AA70376E245062B2F /* Pods_SimpleNoteTakingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleNoteTakingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 		F3594B681D9B552D0046DA07 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				18EEB4471DB64101008D21CC /* UIColor+Extensions.swift */,
 				F3594B691D9B552D0046DA07 /* UIStoryboard+Extensions.swift */,
 				F3594B6A1D9B552D0046DA07 /* UITableView+Extensions.swift */,
 				F3594B6B1D9B552D0046DA07 /* UIViewController+Extensions.swift */,
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3594B731D9B552D0046DA07 /* UIStoryboard+Extensions.swift in Sources */,
+				18EEB4481DB64101008D21CC /* UIColor+Extensions.swift in Sources */,
 				F3594B391D99FCC70046DA07 /* AppDelegate.swift in Sources */,
 				F3594B751D9B552D0046DA07 /* UIViewController+Extensions.swift in Sources */,
 				F3594B721D9B552D0046DA07 /* Constants.swift in Sources */,

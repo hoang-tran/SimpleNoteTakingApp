@@ -46,6 +46,7 @@ class NoteViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupNavigationButtons()
+    setupBodyTextView()
   }
 
   func onTapCreateButton(_ sender: AnyObject) {
@@ -67,6 +68,12 @@ extension NoteViewController {
   fileprivate func setupNavigationButtons() {
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .plain, target: self, action: #selector(NoteViewController.onTapCreateButton))
     self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(NoteViewController.onTapCancelButton))
+  }
+    
+  fileprivate func setupBodyTextView() {
+    bodyTextView.layer.borderWidth = 0.5
+    bodyTextView.layer.borderColor = UIColor.colorWithRed(red: 204, green: 204, blue: 204).cgColor
+    bodyTextView.layer.cornerRadius = 4;
   }
 
   fileprivate func saveNoteToDatabase() {
