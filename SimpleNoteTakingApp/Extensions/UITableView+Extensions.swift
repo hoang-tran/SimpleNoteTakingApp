@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITableView {
-  func defaultCellWithReuseID(reuseID: String) -> UITableViewCell {
-    return dequeueReusableCellWithIdentifier(reuseID) ?? UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseID)
+  func defaultCellWithReuseID(_ reuseID: String) -> UITableViewCell {
+    return self.dequeueReusableCell(withIdentifier: reuseID) ?? UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: reuseID)
   }
 }

@@ -10,21 +10,21 @@
 import RealmSwift
 
 extension BaseUITests {
-  func tapButton(buttonName: String) {
-    tester().tapViewWithAccessibilityLabel(buttonName)
+  func tapButton(_ buttonName: String) {
+    tester().tapView(withAccessibilityLabel: buttonName)
   }
 
-  func expectToSeeAlert(message: String) {
+  func expectToSeeAlert(_ message: String) {
     expectToSee(message)
   }
 
-  func fillIn(accessibilityLabel: String, withText text: String) {
-    tester().clearTextFromAndThenEnterText(text, intoViewWithAccessibilityLabel: accessibilityLabel)
+  func fillIn(_ accessibilityLabel: String, withText text: String) {
+    tester().clearText(fromAndThenEnterText: text, intoViewWithAccessibilityLabel: accessibilityLabel)
   }
 
   func backToRoot() {
-    if let navigationController = UIApplication.sharedApplication().keyWindow?.rootViewController as? UINavigationController {
-      navigationController.popToRootViewControllerAnimated(false)
+    if let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+      navigationController.popToRootViewController(animated: false)
     }
   }
 
@@ -54,8 +54,8 @@ extension BaseUITests {
     }
   }
 
-  func expectToSee(text: String) {
-    tester().waitForViewWithAccessibilityLabel(text)
+  func expectToSee(_ text: String) {
+    tester().waitForView(withAccessibilityLabel: text)
   }
 
 }

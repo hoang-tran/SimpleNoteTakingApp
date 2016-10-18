@@ -17,23 +17,23 @@ extension HomeTests {
   }
 
   func expectTheCreateButtonToBeDisabled() {
-    let createButton = tester().waitForViewWithAccessibilityLabel("Create") as! UIButton
-    expect(createButton.enabled) == false
+    let createButton = tester().waitForView(withAccessibilityLabel: "Create") as! UIButton
+    expect(createButton.isEnabled) == false
   }
 
   func expectTheCreateButtonToBeEnabled() {
-    let createButton = tester().waitForViewWithAccessibilityLabel("Create") as! UIButton
-    expect(createButton.enabled) == true
+    let createButton = tester().waitForView(withAccessibilityLabel: "Create") as! UIButton
+    expect(createButton.isEnabled) == true
   }
 
   func expectNotToSeeNoteList() {
-    tester().waitForAbsenceOfViewWithAccessibilityLabel("Note - Table View")
+    tester().waitForAbsenceOfView(withAccessibilityLabel: "Note - Table View")
   }
 
-  func expectToSeeNoteWithTitle(title: String, body: String, atRow row: NSInteger) {
-    let noteCell = tester().waitForCellAtIndexPath(NSIndexPath(forRow: row, inSection: 0), inTableViewWithAccessibilityIdentifier: "Note - TableView")
-    expect(noteCell.textLabel?.text) == title
-    expect(noteCell.detailTextLabel?.text) == body
+  func expectToSeeNoteWithTitle(_ title: String, body: String, atRow row: NSInteger) {
+    let noteCell = tester().waitForCell(at: IndexPath(row: row, section: 0), inTableViewWithAccessibilityIdentifier: "Note - TableView")
+    expect(noteCell?.textLabel?.text) == title
+    expect(noteCell?.detailTextLabel?.text) == body
   }
 
   func have3Notes() {
@@ -48,40 +48,40 @@ extension HomeTests {
     }
   }
 
-  func fillInNoteTitle(title: String) {
+  func fillInNoteTitle(_ title: String) {
     fillIn("Note - Title", withText: title)
   }
 
-  func fillInNoteBody(body: String) {
+  func fillInNoteBody(_ body: String) {
     fillIn("Note - Body", withText: body)
   }
 
 
-  func updateNoteTitleTo(title: String) {
+  func updateNoteTitleTo(_ title: String) {
     fillInNoteTitle(title)
   }
 
-  func updateNoteBodyTo(body: String) {
+  func updateNoteBodyTo(_ body: String) {
     fillInNoteBody(body)
   }
 
-  func tapOnNoteAtRow(row: Int) {
-    let indexPath = NSIndexPath(forRow: row, inSection: 0)
-    tester().tapRowAtIndexPath(indexPath, inTableViewWithAccessibilityIdentifier: "Note - TableView")
+  func tapOnNoteAtRow(_ row: Int) {
+    let indexPath = IndexPath(row: row, section: 0)
+    tester().tapRow(at: indexPath, inTableViewWithAccessibilityIdentifier: "Note - TableView")
   }
 
-  func expectNumberOfNotesInListToEqual(count: Int) {
-    let noteTableView = tester().waitForViewWithAccessibilityLabel("Note - TableView") as! UITableView
-    expect(noteTableView.numberOfRowsInSection(0)) == count
+  func expectNumberOfNotesInListToEqual(_ count: Int) {
+    let noteTableView = tester().waitForView(withAccessibilityLabel: "Note - TableView") as! UITableView
+    expect(noteTableView.numberOfRows(inSection: 0)) == count
   }
 
   func deleteANote() {
-    let noteTableView = tester().waitForViewWithAccessibilityLabel("Note - TableView") as! UITableView
-    tester().swipeRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), inTableView: noteTableView, inDirection: .Left)
+    let noteTableView = tester().waitForView(withAccessibilityLabel: "Note - TableView") as! UITableView
+    tester().swipeRow(at: IndexPath(row: 0, section: 0), in: noteTableView, in: .left)
     tapButton("Delete")
   }
 
-  func expectToSeeLabel(label: String) {
+  func expectToSeeLabel(_ label: String) {
     expectToSee(label)
   }
 

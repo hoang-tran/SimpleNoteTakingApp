@@ -8,8 +8,8 @@
 
 extension LoginTests {
   func clearOutUsernameAndPasswordFields() {
-    tester().clearTextFromViewWithAccessibilityLabel("Login - Username")
-    tester().clearTextFromViewWithAccessibilityLabel("Login - Password")
+    tester().clearTextFromView(withAccessibilityLabel: "Login - Username")
+    tester().clearTextFromView(withAccessibilityLabel: "Login - Password")
   }
 
   func fillInWrongPassword() {
@@ -17,10 +17,10 @@ extension LoginTests {
   }
 
   func expectToGoToHomeScreen() {
-    tester().waitForAbsenceOfViewWithAccessibilityLabel("Login - Username")
-    tester().waitForAbsenceOfViewWithAccessibilityLabel("Login - Password")
-    tester().waitForAbsenceOfViewWithAccessibilityLabel("Login")
-    tester().waitForViewWithAccessibilityLabel("No notes")
-    tester().waitForViewWithAccessibilityLabel("Add note")
+    tester().waitForAbsenceOfView(withAccessibilityLabel: "Login - Username")
+    tester().waitForAbsenceOfView(withAccessibilityLabel: "Login - Password")
+    tester().waitForAbsenceOfView(withAccessibilityLabel: "Login")
+    tester().waitForView(withAccessibilityLabel: "No notes")
+    tester().waitForView(withAccessibilityLabel: "Add note")
   }
 }

@@ -16,22 +16,22 @@ class HomeViewController: UIViewController {
   var notes: Results<Note>?
 
   lazy var noteViewController : NoteViewController = {
-    let viewController = UIStoryboard.initializeViewController(NoteViewController)
+    let viewController = UIStoryboard.initializeViewController(NoteViewController.self)
     let _ = viewController.view
     return viewController
   }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.onNewNoteCreated), name: notificationNewNoteCreated, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.onNewNoteCreated), name: NSNotification.Name(rawValue: notificationNewNoteCreated), object: nil)
   }
 
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     updateNotes()
   }
 
-  @IBAction func onTapAddNoteButton(sender: AnyObject) {
+  @IBAction func onTapAddNoteButton(_ sender: AnyObject) {
     noteViewController.note = nil
     navigationController?.pushViewController(noteViewController, animated: true)
   }
@@ -45,27 +45,27 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
   func updateNotes() {
     let realm = try! Realm()
-    notes = realm.objects(Note)
+    notes = realm.objects(Note.self)
     updateTableViewVisibility()
     notesTableView.reloadData()
   }
 
   func updateTableViewVisibility() {
-    emptyNotesLabel.hidden = notes?.count > 0
-    notesTableView.hidden = !emptyNotesLabel.hidden
+    emptyNotesLabel.isHidden = (notes?.count)! > 0
+    notesTableView.isHidden = !emptyNotesLabel.isHidden
   }
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
 
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return notes?.count ?? 0
   }
 
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.defaultCellWithReuseID("reuseID")
     let note = notes![indexPath.row]
     cell.textLabel?.text = note.title
@@ -73,30 +73,30 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     return cell
   }
 
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
     noteViewController.note = notes![indexPath.row]
     navigationController?.pushViewController(noteViewController, animated: true)
   }
 
-  func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
     return true
   }
 
-  func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == .Delete {
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
       let realm = try! Realm()
       try! realm.write {
         realm.delete(notes![indexPath.row])
       }
       tableView.beginUpdates()
-      tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+      tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
       tableView.endUpdates()
       updateTableViewVisibility()
     }
   }
 
-  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 60
   }
 }
