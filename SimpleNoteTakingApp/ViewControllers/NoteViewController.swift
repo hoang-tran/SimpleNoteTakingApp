@@ -8,6 +8,26 @@
 
 import UIKit
 import RealmSwift
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class NoteViewController: UIViewController {
   var note: Note? {
@@ -28,28 +48,28 @@ class NoteViewController: UIViewController {
     setupNavigationButtons()
   }
 
-  func onTapCreateButton(sender: AnyObject) {
-    navigationController?.popViewControllerAnimated(true)
+  func onTapCreateButton(_ sender: AnyObject) {
+    navigationController?.popViewController(animated: true)
     saveNoteToDatabase()
-    NSNotificationCenter.defaultCenter().postNotificationName(notificationNewNoteCreated, object: nil)
+    NotificationCenter.default.post(name: Notification.Name(rawValue: notificationNewNoteCreated), object: nil)
   }
 
-  func onTapCancelButton(sender: AnyObject) {
-    navigationController?.popViewControllerAnimated(true)
+  func onTapCancelButton(_ sender: AnyObject) {
+    navigationController?.popViewController(animated: true)
   }
 
-  @IBAction func onNoteTitleTextFieldChanged(sender: AnyObject) {
-    self.navigationItem.rightBarButtonItem?.enabled = titleTextField.text?.characters.count > 0
+  @IBAction func onNoteTitleTextFieldChanged(_ sender: AnyObject) {
+    self.navigationItem.rightBarButtonItem?.isEnabled = titleTextField.text?.characters.count > 0
   }
 }
 
 extension NoteViewController {
-  private func setupNavigationButtons() {
-    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .Plain, target: self, action: #selector(NoteViewController.onTapCreateButton))
-    self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(NoteViewController.onTapCancelButton))
+  fileprivate func setupNavigationButtons() {
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .plain, target: self, action: #selector(NoteViewController.onTapCreateButton))
+    self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(NoteViewController.onTapCancelButton))
   }
 
-  private func saveNoteToDatabase() {
+  fileprivate func saveNoteToDatabase() {
     let realm = try! Realm()
     try! realm.write {
       let note = self.note ?? Note()
